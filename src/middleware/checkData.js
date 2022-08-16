@@ -5,7 +5,7 @@ module.exports = (req,res,next) =>{
     const data = req.body;
 
     let errorMessage = ''
-    if(!data.userId) errorMessage ="Not  Unauthorized"
+    if(!data.name) errorMessage ="Not  Unauthorized"
     if(errorMessage){
         fail({message: errorMessage}, req,res)
         return

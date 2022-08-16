@@ -7,9 +7,10 @@ class BaseDataTable{
 	}
 
 	async checkIfTableExist(){
-		const result = await Datastore('SHOW TABLES LIKE "'+this.tableName+'"')
+		const result = await Datastore('SHOW TABLES LIKE "' + this.tableName + '"')
+		if(!result) throw Error()
 		if(result[0].length === 0) {
-			console.info('table '+this.tableName+' not found');
+			console.info('table '+this.tableName+' not found', result);
 			return false;
 		}
         return true;

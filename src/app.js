@@ -1,11 +1,7 @@
 const express = require('express');
 const cors = require("cors");
 
-const paymentRouter = require('./routers/payment');
-const iframeRouter = require('./routers/iframe');
-const productsRouter = require('./routers/products');
-const customerRouter = require('./routers/customer');
-const emailRouter = require('./routers/email');
+const usersRouter = require('./routers/users');
 
 const corsOptions ={
    origin:'*', 
@@ -18,10 +14,6 @@ app.use(cors(corsOptions))
 
 app.use(express.json());
 
-app.use(paymentRouter);
-app.use(iframeRouter);
-app.use(productsRouter);
-app.use(customerRouter);
-app.use(emailRouter);
+app.use(usersRouter);
 
 module.exports = app;

@@ -18,4 +18,4 @@ class userData extends BaseDataTable {
   }
 }
 
-module.exports = new productsData();
+module.exports = new userData();
