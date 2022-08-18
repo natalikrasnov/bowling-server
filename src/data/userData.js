@@ -16,6 +16,12 @@ class userData extends BaseDataTable {
         " CHARACTER SET = utf8"
     ).then(() => this.insertBaseData());
   }
+
+  findTop5() {
+    return super.findQuery(' 1=1 order by score desc limit 5')
+  }
+
+  
 }
 
 module.exports = new userData();
